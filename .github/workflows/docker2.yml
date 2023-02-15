@@ -27,6 +27,6 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
       - name: Build the tagged Docker image
-        run: docker build -t anakorellana/testindocker .
+        run: docker build -t anakorellana/dockertesting
       - name: Push the tagged Docker image
-        run: docker push anakorellana/testindocker
+        run: docker push anakorellana/dockertesting
